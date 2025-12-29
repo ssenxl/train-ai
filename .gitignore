@@ -1,0 +1,40 @@
+# =====================
+# Python
+# =====================
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# =====================
+# Datasets & Images
+# =====================
+dataset/
+images_by_key/
+final_images/
+small_images/
+uncertain_images/
+tmp_side_dataset/
+sheet_data/
+
+# =====================
+# Model files
+# =====================
+*.pth
+*.pt
+*.onnx
+
+# =====================
+# Generated / Temp
+# =====================
+predictions.json
+*.log
+*.tmp
+
+# =====================
+# OS / Editor
+# =====================
+.DS_Store
+Thumbs.db
+.vscode/
