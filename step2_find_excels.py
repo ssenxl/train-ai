@@ -1,5 +1,6 @@
 import os
 import json
+import time
 
 # =====================
 # CONFIG
@@ -21,8 +22,11 @@ results = []
 # =====================
 for item in keys:
     key = item["key"]
-    found_path = None
 
+    latest_path = None
+    latest_mtime = -1
+
+    # เดินค้นหาทุกไฟล์ที่ชื่อมี key นี้ แล้วเลือกไฟล์ที่แก้ไขล่าสุด
     for root, _, files in os.walk(SEARCH_DIR):
         for fname in files:
             # 🚫 ข้ามไฟล์ชั่วคราว Excel
@@ -35,11 +39,13 @@ for item in keys:
 
             # match key
             if key.lower() in fname.lower():
-                found_path = os.path.join(root, fname)
-                break
+                path = os.path.join(root, fname)
+                mtime = os.path.getmtime(path)
+                if mtime > latest_mtime:
+                    latest_mtime = mtime
+                    latest_path = path
 
-        if found_path:
-            break
+    found_path = latest_path
 
     results.append({
         "row": item["row"],
@@ -49,7 +55,7 @@ for item in keys:
     })
 
     if found_path:
-        print(f"✅ {key} → {found_path}")
+        print(f"✅ {key} → {found_path} (ล่าสุด: {time.ctime(latest_mtime)})")
     else:
         print(f"❌ {key} → ไม่พบไฟล์")
 

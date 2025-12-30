@@ -38,3 +38,6 @@ predictions.json
 .DS_Store
 Thumbs.db
 .vscode/
+__pycache__/
+_tmp_side_dataset/
+arrow_seed/
