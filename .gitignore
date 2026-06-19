@@ -41,3 +41,11 @@ Thumbs.db
 __pycache__/
 _tmp_side_dataset/
 arrow_seed/
+
+# temp / debug / stray test artifacts
+tmp_*.py
+_tmp_*.py
+.tmp_*.py
+debug_*.py
+*.xlsx
+*.xls
