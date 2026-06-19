@@ -173,18 +173,7 @@ Repository นี้มีไว้สำหรับแชร์ Source Code �
 •
 เหมาะสำหรับใช้เป็น Portfolio หรือโปรเจกต์อ้างอิงสำหรับผู้ที่สนใจครับ
 
-📌 เหมาะสำหรับตำแหน่งงาน
 
-•
-AI Engineer
-
-•
-Machine Learning Engineer
-
-•
-Automation Engineer
-
-•
 Data Engineer (Junior–Mid)
 
 •
